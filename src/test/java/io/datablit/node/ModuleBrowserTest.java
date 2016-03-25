@@ -13,7 +13,7 @@ public class ModuleBrowserTest {
 
     @Test
     public void testRootSelector() {
-        ModuleBrowser b = new ModuleBrowser(YangModule.YANG);
+        ModuleBrowser b = new ModuleBrowser(YangModule.YANG, true);
 //        Selection s = b.getRootSelector();
 //        Selection ms = Walk.walk(s, new BrowsePath("module"));
 //        assertNotNull(ms);

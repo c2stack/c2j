@@ -10,7 +10,7 @@ public class WalkTest {
 
     @Test
     public void testExhaustiveWalk() {
-        ModuleBrowser browser = new ModuleBrowser(YangModule.YANG);
+        ModuleBrowser browser = new ModuleBrowser(YangModule.YANG, false);
 //        Walk.walk(browser.getRootSelector(), new ExhaustiveWalk());
     }
 }
