@@ -17,7 +17,8 @@ import java.util.logging.Logger;
  *
  */
 public class ModuleLoader {
-    Logger log = Logger.getLogger("conf2");
+    Logger log = Logger.getLogger("datablit");
+    private static String datablitExecutable = System.getProperty("io.datablit.executable", "datablit");
 
     public Module loadModule(StreamSource source, String resource) {
         ModuleBrowser moduleBrowser = new ModuleBrowser(new Module("unknown"), false);
@@ -27,7 +28,7 @@ public class ModuleLoader {
     }
 
     Reader read(String module) {
-        String[] cmd = asArray("c2-yang", "-module", module);
+        String[] cmd = asArray(datablitExecutable, "-module", module);
         try {
             Process p = Runtime.getRuntime().exec(cmd);
             StreamGobbler stderr = new StreamGobbler(p.getErrorStream());

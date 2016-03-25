@@ -1,4 +1,4 @@
-package org.conf2.restconf;
+package io.datablit.restconf;
 
 import io.datablit.node.Browser;
 import io.datablit.meta.StreamSource;
