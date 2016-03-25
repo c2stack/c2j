@@ -1,7 +1,7 @@
 package org.conf2.restconf;
 
-import org.conf2.data.Browser;
-import org.conf2.schema.StreamSource;
+import io.datablit.node.Browser;
+import io.datablit.meta.StreamSource;
 
 /**
  * Restconf Service

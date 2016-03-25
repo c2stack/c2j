@@ -1,4 +1,4 @@
-package org.conf2.schema;
+package io.datablit.meta;
 
 import java.util.HashMap;
 import java.util.Map;

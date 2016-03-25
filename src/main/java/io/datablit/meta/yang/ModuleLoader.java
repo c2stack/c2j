@@ -1,16 +1,15 @@
-package org.conf2.schema.yang;
+package io.datablit.meta.yang;
 
-import org.conf2.CodedError;
-import org.conf2.data.Context;
-import org.conf2.data.JsonReader;
-import org.conf2.data.Node;
-import org.conf2.schema.Module;
-import org.conf2.schema.StreamSource;
-import org.conf2.data.ModuleBrowser;
-import org.conf2.util.StreamGobbler;
+import io.datablit.util.CodedError;
+import io.datablit.node.Context;
+import io.datablit.node.JsonReader;
+import io.datablit.node.Node;
+import io.datablit.meta.Module;
+import io.datablit.meta.StreamSource;
+import io.datablit.node.ModuleBrowser;
+import io.datablit.util.StreamGobbler;
 
 import java.io.*;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
@@ -21,7 +20,7 @@ public class ModuleLoader {
     Logger log = Logger.getLogger("conf2");
 
     public Module loadModule(StreamSource source, String resource) {
-        ModuleBrowser moduleBrowser = new ModuleBrowser(null);
+        ModuleBrowser moduleBrowser = new ModuleBrowser(new Module("unknown"), false);
         Node json = new JsonReader(read(resource)).getNode();
         new Context().select(moduleBrowser.getSchema(), moduleBrowser.getNode()).insertFrom(json);
         return moduleBrowser.module;

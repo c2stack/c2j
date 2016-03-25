@@ -1,4 +1,4 @@
-package org.conf2.util;
+package io.datablit.util;
 
 import java.util.Arrays;
 

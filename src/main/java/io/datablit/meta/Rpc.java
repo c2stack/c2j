@@ -1,4 +1,4 @@
-package org.conf2.schema;
+package io.datablit.meta;
 
 /**
  *
@@ -28,5 +28,11 @@ public class Rpc extends MetaBase implements MetaCollection, Describable {
         if (input != null && output != null) {
             input.setSibling(output);
         }
+    }
+
+    @Override
+    public void clear() {
+        input = null;
+        output = null;
     }
 }

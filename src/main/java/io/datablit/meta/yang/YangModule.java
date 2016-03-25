@@ -1,6 +1,6 @@
-package org.conf2.schema.yang;
+package io.datablit.meta.yang;
 
-import org.conf2.schema.*;
+import io.datablit.meta.*;
 
 /**
  * Construct meta tree from yang-1.0.yang by hand, eventually generate it from template.
